@@ -1,5 +1,5 @@
-let notas = [ 9.5, 7, 5.5, 2.3, 8.5, 11]
-notas.sort()
+let notas = [ 9.5, 7.2, 5.5, 2.3, 8.5, 11]
+notas.sort()  
 
 
 function conceitoNotas(notas) {
