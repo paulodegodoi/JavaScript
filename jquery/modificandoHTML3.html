@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Modificando HTML #03</title>
+        <link rel="stylesheet" href="css/estilo.css" />
+        <script src="js/jquery.js"></script>
+    </head>
 
-<head>
-    <meta charset='UTF-8'>
-    <title>Modificando HTML #03</title>
-    <link rel='stylesheet' href='css/estilo.css'>
-    <script src='js/jquery.js'></script>
-</head>
+    <body class="conteudo exercicio">
+        <h1>Modificando HTML #03</h1>
+        <div id="conteudo"></div>
 
-<body class='conteudo exercicio'>
-    <h1>Modificando HTML #03</h1>
-    <div id='conteudo'></div>
+        <script>
+            const pessoas = [
+                { nome: "Ana", nota: 9.1 },
+                { nome: "Bianca", nota: 8.4 },
+                { nome: "Carlos", nota: 7.6 },
+                { nome: "Julia", nota: 9.7 },
+            ];
 
-    <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
-        
-        // ...
-    </script>
-</body>
+            $("#conteudo").append("<table id='tblAlunos'>");
+
+            $.each(pessoas, (i, pessoa) => {
+                $("#tblAlunos")
+                    .append("<tr></tr>")
+                    .append(`<td>${pessoa.nome}</td><td>${pessoa.nota}</td>`);
+            });
+
+            // $("#tabAlunos").append(function () {
+            //     pessoas.forEach((pessoas) => {
+            //         $("table").append(
+            //             `<tr><td>${pessoas.nome}</td><td>${pessoas.nota}</td></tr>`
+            //         );
+            //     });
+            // });
+        </script>
+    </body>
+</html>
